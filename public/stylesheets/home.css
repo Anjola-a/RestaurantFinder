@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    background-image: 
+    url("https://images.unsplash.com/photo-1522906456132-bac22adad34e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHw%3D&auto=format&fit=crop&w=900&q=60");
+    background-size: cover;
+    background-position: center;
+	
+    
+}
+.ANJOLA{
+	color: white;
+
+}
+.jumbotron{
+	 padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+
+/* .btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+} */
+
+/* .bodytexts{
+	color: white;
+	font-size: 300px;
+} */

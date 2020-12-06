@@ -1,0 +1,61 @@
+<%- include("./partials/header") %>
+
+<h1>
+	Please select your Interests
+</h1>
+<form action="/user/<%= user._id %>/interests" method="POST">
+	<div class="container">
+	<div class= "row">
+		<div class="col-md-4 ">
+			
+				<input name="intrest[vegan]" value="vegan food" type="checkbox" id="myCheckbox1" />
+			<label for="myCheckbox1"> 
+			  <img src="https://images.unsplash.com/photo-1547496502-affa22d38842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+			</label>
+			
+			<div class=caption>
+				<h4>
+					Vegan food
+				</h4>
+			</div>
+			
+		</div>
+		<div class="col-md-4 ">
+			<input name="intrest[italian]" value ="italian food" type="checkbox" id="myCheckbox2" />
+			<label for="myCheckbox2"> <strong>Italian food</strong>
+			  <img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+			</label>
+			<div class=caption>
+				<h4>
+					Italian Food
+				</h4>
+			</div>
+		</div>
+		<div class="col-md-4 "> <strong>Fast Food</strong>
+			<input name="intrest[fast]" value ="fast food" type="checkbox" id="myCheckbox3" />
+			<label for="myCheckbox3">
+			  <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+			</label>
+			<div class=caption>
+				<h4>
+					Fast food
+				</h4>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+	<label for="location">Please enter your city and province/state:</label><br>
+	 <input type="text" id="location" name="intrest[location]" placeholder="city, state"><br>
+	
+	<input type="submit"> 
+</form>
+
+
+
+
+
+<%- include("./partials/footer") %><ul>
+ 

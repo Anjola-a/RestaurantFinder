@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Restaurant Finder!</title>
+		<link  rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+    </head>
+    <body>
+		<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Community Companion</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+					
+                    <% if(!currentUser){ %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                    <% } else { %>
+					<!-- this will later take me to profile page -->
+                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h4>
+	<%= currentUser %>
+</h4>
+
+<div class="jumbotron myjumbotron">
+	<div class="container">
+		<h1>Restaurant Finder</h1>
+	
+	  <p>Find the highest rated restaurants in your city!</p>
+		<% if(currentUser){ %>
+			<p><a class="btn btn-primary btn-lg" href="/user/<%= currentUser._id %>" role="button">Start Eating</a></p>
+		<% } else { %>
+	  		<p><a class="btn btn-primary btn-lg" href="/login" role="button">Log in!</a></p>
+		<% } %>
+	</div>
+	</div>
+	
+  
+
+<%- include("./partials/footer") %>
