@@ -149,15 +149,7 @@ app.get("/user/:id",  isLoggedIn ,function(req, res){
 			Promise.all(arr1).then(values => {
 				console.log(arr1);
 				console.log(values.length);
-				// console.log(values[1].jsonBody.businesses[0].name);
-				// console.log(values[1].jsonBody.businesses[1].name);
-				// console.log(values[1].jsonBody.businesses[2].name);
-				// console.log(values[2].jsonBody.businesses[0].name);
-				// console.log(values[2].jsonBody.businesses[1].name);
-				// console.log(values[2].jsonBody.businesses[2].name);
-				// console.log(values[0].jsonBody.businesses[0].name);
-				// console.log(values[0].jsonBody.businesses[1].name);
-				// console.log(values[0].jsonBody.businesses[2].name);
+				
 			res.render("page", {user: foundUser, values: values} );
 			
 			})
