@@ -276,6 +276,7 @@ function isLoggedIn(req, res, next){
     }
     res.redirect("/login");
 }
-app.listen(3000, function() { 
+const port = process.env.PORT || 3000;
+app.listen(port, function() { 
   console.log('YelpCamp Server  has started'); 
 });
