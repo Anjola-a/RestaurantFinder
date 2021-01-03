@@ -11,7 +11,8 @@ var bodyParser=require("body-parser");
 var methodOverride = require("method-override");
 var mongoose=require("mongoose");
 var path = require("path");
-mongoose.connect('mongodb://localhost:27017/Anjola', {
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/Anjola', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
