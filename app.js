@@ -158,27 +158,27 @@ app.get("/user/:id",  isLoggedIn ,function(req, res){
 				});
 				arr1.push(fast);
 				}
-			else if (foundUser.interests[0].vegan){
+			if (foundUser.interests[0].vegan){
 				var vegan = client.search({
 				  term: foundUser.interests[0].vegan,
 				  location: foundUser.interests[0].location,
-					limit: 3,
+					limit: 5,
 				})
 				arr1.push(vegan);
 			}
 			
-			else if (foundUser.interests[0].italian){
+			if (foundUser.interests[0].italian){
 				var italian = client.search({
 				  term: foundUser.interests[0].italian,
 				  location: foundUser.interests[0].location,
-					limit: 3,
+					limit: 5,
 					
 				})
 				arr1.push(italian);
 				} 
 			Promise.all(arr1).then(values => {
-				console.log(arr1);
-				console.log(values.length);
+				console.log("arri"+arr1.length);
+				//console.log(values);
 				
 			res.render("page", {user: foundUser, values: values} );
 			
