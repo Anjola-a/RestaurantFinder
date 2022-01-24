@@ -12,7 +12,7 @@ var UserSchema = new mongoose.Schema({
 	]
 });
 		
-
+// ensures username is unique
 UserSchema.plugin(passportLocalMongoose)
 
 module.exports = mongoose.model("User", UserSchema);

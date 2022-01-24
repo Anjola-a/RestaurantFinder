@@ -27,7 +27,11 @@
             </div>
         </div>
     </nav>
-		
+    <% if(success && success.length) {%>
+    <div>
+        <%- include("./partials/flash") %>
+    </div>
+    <% }%>
 <h1>Login!</h1>
 <form action="/login" method="POST">
 	<div class="container">
